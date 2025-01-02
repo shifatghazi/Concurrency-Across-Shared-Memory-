@@ -1,0 +1,9 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     '/Users/shifatghazi/Documents/SYSC 4001 Fall 2024/Assignment 3/Part 2/TA_Marking/Part C/Part2_C_101265285_101257940'
+relocations:
+  - { offsetInCU: 0x26, offset: 0x26, size: 0x8, addend: 0x0, symName: _runMarking, symObjAddr: 0x0, symBinAddr: 0x100003920, symSize: 0x21C }
+  - { offsetInCU: 0x4D, offset: 0x4D, size: 0x8, addend: 0x0, symName: _taSemaphores, symBinAddr: 0x100008000, symSize: 0x0 }
+  - { offsetInCU: 0x79, offset: 0x79, size: 0x8, addend: 0x0, symName: _runMarking, symObjAddr: 0x0, symBinAddr: 0x100003920, symSize: 0x21C }
+  - { offsetInCU: 0xFF, offset: 0xFF, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x21C, symBinAddr: 0x100003B3C, symSize: 0x2E0 }
+...

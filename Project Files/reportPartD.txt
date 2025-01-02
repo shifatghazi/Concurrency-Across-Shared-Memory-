@@ -1,0 +1,25 @@
+Part 2.d Analysis
+
+In Part A, no deadlock or livelock was outcomes. Each TA marked the students in an expected order and  the semaphores made sure proper steps were performed by preventing multiple TAs from accessing conflicting resources at the same time. The marking process was completed and all output files were generated correctly with the expected results.
+
+In Part B, the program is observed without any deadlock or livelock as well. The shared memory allowed all TAs to access a student list, making sure the data is accurate across all processes. Semaphores made sure orderly access to shared memory was present that led to avoiding race conditions. Therefore, all TAs completed marking as expected. It is evident shared data was handled efficiently to get marks
+
+In Part C, no deadlock occurred given the retry action with sem_trywait. With semaphore contention a slight delay started to become present given multiple TAs sometimes attempted to access the same semaphore. However, the retry mechanism made the required progress to complete the tasks successfully. Therefore, output files were generated correctly.
+
+For execution order, this varied due to random delays introduced by sleep(). This led to causing TAs to mark students in a non-sequential manner. However, all students were marked successfully without any being skipped. In addition, in Part C it was evident the retry logic improved process coordination and made sure no task was endlessly delayed.
+                                
+
+
+Hand In:
+3.  A discussion of your design in the context of the three requirements associated with the  solution to the critical section problem. 
+                
+For the critical section problem discussion, the program ensures compliance with the three critical section problem requirements. Such 3 are:
+
+-Mutual Exclusion:
+Semaphores are used to make sure that only one TA can access a resource that is shared, in this case the student list but at any given time. This means that no two TAs can mark the same student at the same time to avoid conflicts. Therefore, within the program, semaphores perform this rule to a great degree and efficiently that allows organized coordination when performing a task like marking.
+
+-Progress:
+Each TA is able to mark as long as the unique semaphores are available. In Part C, the retry logic played an important aspect by making sure that no process is stuck endlessly. Therefore, if a TA could not get both required semaphores, it would then release the one it holds and essentially retry later. Due to this action, this route makes sure that marking essentially progresses for all TAs without unnecessary delays.
+
+-Bounded Waiting:
+For this problem, the design makes sure that no TA has to wait endlessly to access a resource. In Part C, the retry logic implemented prevents processes from being halted for too long by releasing semaphores in the case if the next required one is unavailable. Therefore, this allows other TAs to proceed by making sure there is fairness but also preventing one TA from being locked out of the marking process.
