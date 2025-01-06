@@ -1,4 +1,4 @@
-## README for Part 2
+## README for Concurrency Project
 
 ### Files Included
 - Part2_A_101265285_101257940.c
